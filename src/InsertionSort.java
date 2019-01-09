@@ -1,37 +1,57 @@
-import java.util.Arrays;
-
 /**
  * @author Ksenia Koldaeva
  * Created: 10/29/17
  * Last Updated: 01/08/2019
  */
 public class InsertionSort {
-    public static void insertionSortDecreasing(int[] array) {
-        // iterate over the array starting from index 1
+    /**
+     * Sorts an array of integers in increasing or decreasing order
+     * @param arr array of integers
+     * @param decreasing - if true the order of sorting is decreasing, otherwise increasing
+     */
+    public static void sort(int[] arr, boolean decreasing) {
+        // iterate over the arr starting from index 1
         int key;
-        for (int i = 1; i < array.length; i++) {
-            key = array[i];
-            int j = i - 1;
 
-            while (j >= 0 && array[j] < key) {
-                // move elements up
-                array[j + 1] = array[j];
-                --j;
+        if (decreasing) {
+            for (int i = 1; i < arr.length; i++) {
+                key = arr[i];
+                int j = i - 1;
+
+                while (j >= 0 && arr[j] < key) {
+                    // move elements up
+                    arr[j + 1] = arr[j];
+                    --j;
+                }
+
+                arr[j + 1] = key;
+
             }
+        } else {
+            for (int i = 1; i < arr.length; i++) {
+                key = arr[i];
+                int j = i - 1;
 
-            array[j + 1] = key;
+                while (j >= 0 && arr[j] > key) {
+                    // move elements up
+                    arr[j + 1] = arr[j];
+                    --j;
+                }
 
+                arr[j + 1] = key;
+
+            }
         }
+
     }
 
     /**
      * Driver method
-     * @param args
      */
     public static void main(String[] args) {
         int[] array = {5, 2, 6, 1, 8, 3, 4};
 
-         insertionSortDecreasing(array);
+         sort(array, true);
          Utils.printArray(array);
     }
 }
