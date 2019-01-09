@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * @author Ksenia Koldaeva
  * Created: 10/29/17
- * Last Updated:
+ * Last Updated: 01/08/2019
  */
 public class InsertionSort {
     public static void insertionSortDecreasing(int[] array) {
@@ -24,28 +24,14 @@ public class InsertionSort {
         }
     }
 
-    public static void printArray(int[] array) {
-        int arraySize = array.length;
-
-        System.out.println("----------");
-        for(int i = 0; i < arraySize; i++){
-
-            System.out.print("| " + i + " | ");
-            System.out.println(array[i] + " |");
-
-            System.out.println("----------");
-
-        }
-
-    }
-
+    /**
+     * Driver method
+     * @param args
+     */
     public static void main(String[] args) {
         int[] array = {5, 2, 6, 1, 8, 3, 4};
 
          insertionSortDecreasing(array);
-         printArray(array);
-
-
+         Utils.printArray(array);
     }
-
 }

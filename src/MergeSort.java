@@ -4,12 +4,11 @@ import java.util.Collections;
 /**
  * @author Ksenia Koldaeva
  * Created: 10/28/17
- * Last Updated:
+ * Last Updated: 01/08/19
+ *
+ * Implemenration of the MergeSort Algorithm with extra storage
  */
 public class MergeSort {
-
-    MergeSort() {
-    }
 
     public static void sort(int [] arrayToSort) {
         if (arrayToSort.length <= 1) { return; }
@@ -50,7 +49,6 @@ public class MergeSort {
         }
 
         // copy remaining elements into the arrayToSort
-
         while (nextInFirst < first.length) {
             arrayToSort[nextPosition] = first[nextInFirst];
             nextInFirst++;
@@ -66,8 +64,8 @@ public class MergeSort {
 
     public static void main (String [] args) {
         int [] arrayToSort = {99, 16, 3, 19, 13, 0, 13, 12 };
-//        Collections.shuffle(Arrays.asList(arrayToSort));
-//        sort(arrayToSort);
+        Collections.shuffle(Arrays.asList(arrayToSort));
+        sort(arrayToSort);
 
         System.out.println(Arrays.toString(arrayToSort));
     }
