@@ -3,7 +3,7 @@
 ## Insertion Sort: 
     * Accepts boolean argument `decreasing` for easily reversing the order of sorting
     * Completes sorting in O(n^2) time complexity in the worth case
-    * Has O(n) when array is sorted (soting has to match descreasing or increasing order)
+    * Has O(n) when array is sorted (sorting has to match descreasing or increasing order)
     
 
 ## Merge Sort: 
@@ -14,6 +14,6 @@
 ### Quick Sort:
     * Does not require additional space
     * Perfoms in O(nlogn) time on average
-    * Has O(n^2) time complexity in the worth case - when array is sorted or reverselity sorted
+    * Has O(n^2) time complexity in the worth case - when array is sorted or reversely sorted
     * Picks first element of the givien array as a pivot element
-    * This is not a randomized implementation which will solve the problem above
+    * This is not a randomized implementation which will solve the worth case time complexity
